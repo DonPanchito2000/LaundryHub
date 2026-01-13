@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.hero {
+    position: relative;
+    height: 100dvh; /* full viewport height */
+    color: #fff; /* make text visible */
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/background_image.jpeg') center/cover no-repeat;
+    filter: blur(2px); /* blur the image */
+    background-size: cover;
+    z-index: 0;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2); /* dark overlay */
+    z-index: 1;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2; /* ensures content is above blur + overlay */
+}
+
+
+.logo{
+    width: 70px;
+}
+
+.deks-nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    /* background-color: black; */
+}
+
+.deks-ul li {
+    list-style-type: none;
+    padding: 0 20px;
+}
+
+.deks-ul li a{
+    text-decoration: none;
+    font-size: clamp(1em, 2vw, 1.2em);
+    color: #3A9AD9;
+}
+
+.hero-title{
+    /* background-color: black !important; */
+    height: 100%;
+    /* margin-bottom: 30px; */
+}
+
+.hero-title h1{
+    color: #6E7B8A  ;
+    font-size: clamp(2.6em, 4vw, 4em);
+}
+
+.hero-title h1 span{
+    color:#3A9AD9 ;
+}
+
+.hero-title img{
+    max-width: 400px;
+    min-width: 300px !important; 
+}
+
+.hero-title .btn {
+    margin-top: 10px;
+    background-color: #6E7B8A;
+    padding: 6px 30px;
+    color: #fff !important;
+    outline: none;
+    transition: 0.5s ease;
+}
+.hero-title .btn i{
+    margin-right: 5px;
+}
+
+.hero-title .btn:hover{
+    background-color: #3A9AD9;
+}
+
+/* Services section Start*/
+.services{
+    height: 100dvh;
+    background-color: #fff;
+    padding: 20px;
+    /* display: flex ;
+    justify-content: center; */
+    /* align-items: center; */
+}
+
+.service-title{
+    display: flex;
+    justify-content: center;
+}
+.service-title h1{
+    font-size: clamp(2.6em, 4vw, 4em);
+    margin-top: 70px !important;
+    margin: 30px;
+    color: #6E7B8A;
+}
+
+.service{
+    padding: 25px;
+    margin: 20px;
+    max-width: 400px;
+    min-width: 250px;
+    max-height: 300px;
+    background-color:   transparent;
+    border-radius: 10px 60px 10px 0px;
+    opacity: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #3A9AD9;
+    border: 2px solid #6E7B8A;
+}
+
+.service h2{
+    font-size: clamp(1.6em, 2.6vw, 2em);
+    text-align: center;
+}
+
+.wash-and-fold img{
+    width: 30px;
+}
+
+.service img{
+    width: 50px;
+}
+
+.service ul{
+   font-size: clamp(0.85em, 1.5vw, 1em);
+}
+.service ul LI{
+    color: #6E7B8A;
+}
+
+
+/* Services Section End */

@@ -1,0 +1,86 @@
+{% extends 'account/base.htm' %}
+{% load static %}
+{% block title %}JOBY'S Laundry Hub{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'account/styles/home.css' %}">{% endblock extra_css %}
+
+{% block content %}
+<div id="hero" class="hero container-fluid p-2">
+    <nav class="deks-nav">
+        <img src="{% static 'account/images/logo_no_bg.png' %}" alt="" class="logo">
+        <ul class="deks-ul d-flex">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="">Login</a></li>
+        </ul>
+    </nav>
+    <div class="hero-title">
+        <img src="{% static 'account/images/logo_no_bg.png' %}" alt="" >
+        <h1><span class="auto-type"></span> Laundry Solutions</h1>
+        <button class="btn btn-login"><i class="fa-solid fa-basket-shopping"></i>Login</button>
+    </div>
+</div>
+
+<div id="services" class="services container-fluid">
+   <div class="service-title">
+         <h1>Our Services</h1>
+   </div>
+    <div class="row d-flex justify-content-center p-lg-5">
+        <div class="service col-lg-4 col-sm-12">
+            <img src="{% static 'account/images/wash-and-fold.png' %}" alt="">
+            <h2>Wash, Dry & Fold</h2>
+            <ul class="">
+                <li>Everyday laundry service</li>
+                <li>Clothes are washed, dried, and neatly folded</li>
+                <li>Charged per kilo</li>
+            </ul>
+        </div>
+        <div class="service col-lg-4 col-sm-12">
+             <img src="{% static 'account/images/wash-and-dry.png' %}" alt="">
+             <h2>Dry Cleaning</h2>
+             <ul class="">
+                <li>Everyday laundry service</li>
+                <li>Clothes are washed, dried, and neatly folded</li>
+                <li>Charged per kilo</li>
+            </ul>
+        </div>
+        <div class="service col-lg-4 col-sm-12">
+               <img src="{% static 'account/images/ironing.png' %}" alt="">
+               <h2>Ironing</h2>
+               <ul class="">
+                    <li>Everyday laundry service</li>
+                    <li>Clothes are washed, dried, and neatly folded</li>
+                    <li>Charged per kilo</li>
+                </ul>
+        </div>
+    </div>
+    <!-- <div class="service">
+        <img src="{% static 'account/images/wash-and-fold.png' %}" alt="">
+        <h2>Wash & Fold</h2>
+    </div>
+    <div class="service">
+        <img src="{% static 'account/images/wash-and-dry.png' %}" alt="">
+        <h2>Dry Cleaning</h2>
+    </div>
+    <div class="service">
+        <img src="{% static 'account/images/ironing.png' %}" alt="">
+        <h2>Ironing</h2>
+    </div> -->
+</div>
+
+{% endblock content %}
+
+ {% block extra_js %}
+  <!-- typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+         var typed = new Typed(".auto-type", {
+            strings : ["Fast","Clean","Reliable"],
+            typeSpeed : 150,
+            backSpeed : 150,
+            backDelay: 1500,
+            loop : true
+
+        })
+    </script>
+ {% endblock %}
