@@ -5,18 +5,13 @@
 
 {% block content %}
 <div id="hero" class="hero container-fluid p-2">
-    <nav class="deks-nav">
-        <img src="{% static 'account/images/logo_no_bg.png' %}" alt="" class="logo">
-        <ul class="deks-ul d-flex">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="">Login</a></li>
-        </ul>
-    </nav>
+
+    {% include 'account/nav.htm' %}
+    
     <div class="hero-title">
         <img src="{% static 'account/images/logo_no_bg.png' %}" alt="" >
         <h1><span class="auto-type"></span> Laundry Solutions</h1>
-        <button class="btn btn-login"><i class="fa-solid fa-basket-shopping"></i>Login</button>
+        <a href="{% url 'login' %}"><button class="btn btn-login">Order<i class="fa-solid fa-basket-shopping"></i></button></a>
     </div>
 </div>
 

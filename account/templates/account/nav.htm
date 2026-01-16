@@ -1,0 +1,11 @@
+{% load static %}
+ <nav class="deks-nav">
+        <img src="{% static 'account/images/logo_no_bg.png' %}" alt="" class="logo">
+        <ul class="deks-ul d-flex">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            {% endif %}
+        </ul>
+    </nav>
